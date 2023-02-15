@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:spotify_clone/config/constants.dart';
 import 'package:spotify_clone/utils/helpers.dart';
 
 class home_big_tile extends StatelessWidget {
@@ -9,26 +10,29 @@ class home_big_tile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 150,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: <Widget>[
-          Container(
-            width: 150,
-            height: 150,
-            child: Image.asset(imagePath),
-          ),
-          const VerticalSpacer(height: 10),
-          Text(
-            title,
-            softWrap: true,
-            overflow: TextOverflow.ellipsis,
-            style: TextStyle(
-              color: Colors.grey[700],
+    return GestureDetector(
+      onTap: () => Navigator.of(context).pushNamed(detailsPage),
+      child: SizedBox(
+        width: 150,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: <Widget>[
+            SizedBox(
+              width: 150,
+              height: 150,
+              child: Image.asset(imagePath),
             ),
-          )
-        ],
+            const VerticalSpacer(height: 10),
+            Text(
+              title,
+              softWrap: true,
+              overflow: TextOverflow.ellipsis,
+              style: TextStyle(
+                color: Colors.grey[700],
+              ),
+            )
+          ],
+        ),
       ),
     );
   }
