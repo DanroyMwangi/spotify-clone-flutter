@@ -11,6 +11,8 @@ class RouteGenerator {
     switch (settings.name) {
       case homePage:
         return MaterialPageRoute(builder: ((_) => const HomePage()));
+      case errorPage:
+        return MaterialPageRoute(builder: (_) => const ErrorPage());
       default:
         return MaterialPageRoute(builder: (_) => const ErrorPage());
     }
