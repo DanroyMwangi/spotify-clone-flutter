@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:spotify_clone/theme/font_theme.dart';
 import 'package:spotify_clone/utils/helpers.dart';
 import 'package:spotify_clone/widgets/home_big_tile.dart';
 import 'package:spotify_clone/widgets/home_page_recent_tile.dart';
@@ -122,8 +123,8 @@ class _HomePageState extends State<HomePage> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: const <Widget>[
                           HomePageRecentTile(
-                              imagePath: 'assets/images/protoje.jpg',
-                              title: 'Protoje'),
+                              imagePath: 'assets/images/emlBB.jpeg',
+                              title: 'East Mpaka London'),
                           HomePageRecentTile(
                               imagePath: 'assets/images/wakadinaliVom.jpeg',
                               title: 'Victims of Madness'),
@@ -149,16 +150,14 @@ class _HomePageState extends State<HomePage> {
                               imagePath: 'assets/images/protojeSLT.jpg',
                               title: 'Search of Lost Time'),
                           HomePageRecentTile(
-                              imagePath: 'assets/images/lilmama.jpg',
-                              title: 'Free Spirit'),
+                              imagePath: 'assets/images/zoza.jpg',
+                              title: 'Zoza'),
                         ],
                       ),
                     ],
                   ),
                   const VerticalSpacer(height: 20),
-                  const Text('Jump back in',
-                      style: TextStyle(
-                          fontSize: 25.0, fontWeight: FontWeight.w500)),
+                  const Text('Jump back in', style: mediumTitle),
                   const VerticalSpacer(height: 20),
 
                   // Big tiles Row 1
@@ -167,19 +166,19 @@ class _HomePageState extends State<HomePage> {
                     scrollDirection: Axis.horizontal,
                     child: Row(
                       children: const <Widget>[
-                        home_big_tile(
+                        HomeBigTile(
                             imagePath: 'assets/images/kendrickMBS.jpeg',
                             title: 'Mr. Morale and the Big Steppers'),
                         HorizontalSpacer(width: 20),
-                        home_big_tile(
+                        HomeBigTile(
                             imagePath: 'assets/images/protojeSLT.jpg',
                             title: 'Search of Lost Time'),
                         HorizontalSpacer(width: 20),
-                        home_big_tile(
+                        HomeBigTile(
                             imagePath: 'assets/images/savagelevel.jpg',
                             title: 'Savage Level'),
                         HorizontalSpacer(width: 20),
-                        home_big_tile(
+                        HomeBigTile(
                             imagePath: 'assets/images/kendrickDamn.jpeg',
                             title: 'Damn'),
                         HorizontalSpacer(width: 20)
@@ -188,28 +187,26 @@ class _HomePageState extends State<HomePage> {
                   ),
 
                   const VerticalSpacer(height: 20),
-                  const Text('Made for you',
-                      style: TextStyle(
-                          fontSize: 25.0, fontWeight: FontWeight.w500)),
+                  const Text('Made for you', style: mediumTitle),
                   const VerticalSpacer(height: 20),
 
                   SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
                     child: Row(
                       children: const <Widget>[
-                        home_big_tile(
+                        HomeBigTile(
                             imagePath: 'assets/images/khalidFs.png',
                             title: 'Free Spirit'),
                         HorizontalSpacer(width: 20),
-                        home_big_tile(
+                        HomeBigTile(
                             imagePath: 'assets/images/kendrickDamn.jpeg',
                             title: 'Damn'),
                         HorizontalSpacer(width: 20),
-                        home_big_tile(
+                        HomeBigTile(
                             imagePath: 'assets/images/jcoleFHD.jpg',
                             title: 'Forest Hill Drive'),
                         HorizontalSpacer(width: 20),
-                        home_big_tile(
+                        HomeBigTile(
                             imagePath: 'assets/images/wakadinaliVom.jpeg',
                             title: 'Wakadinali\'s Victims of Madness'),
                         HorizontalSpacer(width: 20),

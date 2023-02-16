@@ -2,16 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:spotify_clone/config/constants.dart';
 import 'package:spotify_clone/utils/helpers.dart';
 
-class home_big_tile extends StatelessWidget {
+class HomeBigTile extends StatelessWidget {
   final String title;
   final String imagePath;
-  const home_big_tile({Key? key, required this.title, required this.imagePath})
+  const HomeBigTile({Key? key, required this.title, required this.imagePath})
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => Navigator.of(context).pushNamed(detailsPage),
+      onTap: () => Navigator.of(context).pushNamed(albumDetailsPage),
       child: SizedBox(
         width: 150,
         child: Column(
@@ -28,7 +28,7 @@ class home_big_tile extends StatelessWidget {
               softWrap: true,
               overflow: TextOverflow.ellipsis,
               style: TextStyle(
-                color: Colors.grey[700],
+                color: Colors.grey[500],
               ),
             )
           ],
